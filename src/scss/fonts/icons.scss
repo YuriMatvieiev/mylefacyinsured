@@ -1,0 +1,49 @@
+%ic {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+  &::before {
+    @extend %ic;
+  }
+}
+
+._icon-cancel:before {
+  content: "\e906";
+}
+._icon-checkmark-full:before {
+  content: "\e902";
+}
+._icon-checkmark-empty:before {
+  content: "\e903";
+}
+._icon-question:before {
+  content: "\e904";
+}
+._icon-phone-call:before {
+  content: "\e905";
+}
+._icon-chevron-right:before {
+  content: "\e901";
+}
+._icon-x-logo:before {
+  content: "\e900";
+}
+._icon-star-full:before {
+  content: "\e9d9";
+}
+._icon-facebook-logo:before {
+  content: "\ea90";
+}
+._icon-instagram-logo:before {
+  content: "\ea92";
+}
+._icon-linkedin-logo:before {
+  content: "\eaca";
+}

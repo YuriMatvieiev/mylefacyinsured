@@ -1,0 +1,120 @@
+// Базові стилі спойлерів
+// Сніппет (HTML): spoller
+
+// Блок зі спойлерами
+.spollers {
+  display: grid;
+  max-width: 1040px;
+  margin: toRem(50) auto 0;
+  @media (max-width: $mobile) {
+    margin: toRem(20) auto 0;
+  }
+}
+// Спойлер
+.spollers__item {
+  border-bottom: 1px solid #e2cfbc;
+}
+// Заголовок спойлера
+.spollers__title {
+  width: 100%;
+  cursor: default;
+  text-align: left;
+  padding: 30px 50px 25px 16px;
+  position: relative;
+  list-style: none;
+  font-size: toRem(30);
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -2px;
+  transition: all 0.3s;
+  @media (max-width: $mobile) {
+    font-size: toRem(24);
+    letter-spacing: 0px;
+  }
+  &::marker,
+  &::-webkit-details-marker {
+    display: none;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+  ._spoller-init & {
+    cursor: pointer;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      background-color: var(--secondary);
+      height: 4px;
+      width: 23px;
+      transition: transform 0.5s ease 0s;
+    }
+    &::before {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotateZ(90deg);
+    }
+    &._spoller-active {
+      color: var(--secondary);
+      &::before {
+        transform: translateX(-50%) rotateZ(0deg);
+      }
+      &::after {
+        transform: translateX(-50%) rotateZ(0deg);
+      }
+    }
+    /*
+		._spoller-init & {
+			position: relative;
+			width: 100%;
+			text-align: left;
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: toRem(12);
+				height: toRem(1);
+				transition: all 0.3s ease 0s;
+				width: toRem(10);
+				background-color: #000;
+			}
+			&::before {
+				transform: rotate(40deg);
+				right: toRem(7);
+			}
+			&::after {
+				transform: rotate(-40deg);
+			}
+		}
+		&._spoller-active {
+			&::before {
+				transform: rotate(-40deg);
+			}
+			&::after {
+				transform: rotate(40deg);
+			}
+		}
+		*/
+  }
+}
+// Контент спойлера
+.spollers__body {
+  padding: 0 30px 40px 20px;
+  font-family: "Inter";
+  font-size: toRem(25);
+  line-height: 140%;
+  letter-spacing: -0.3px;
+  font-style: italic;
+  @media (max-width: $mobile) {
+    font-size: toRem(20);
+    letter-spacing: 0px;
+    line-height: 130%;
+    padding: 0 20px 20px;
+  }
+}

@@ -1,0 +1,120 @@
+//====================================================================================================
+.footer {
+  padding: 45px 0;
+  @media (max-width: $mobile) {
+    padding: 20px 0;
+  }
+  // .footer__container
+  &__container {
+  }
+  // .footer__top
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: toRem(50);
+    border-bottom: 1px solid var(--border);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 30px;
+      padding-bottom: toRem(30);
+    }
+  }
+  // .footer__logo
+  &__logo {
+    font-size: 33px;
+    font-weight: 300;
+    display: block;
+    line-height: 120%;
+    span {
+      font-weight: 700;
+      font-style: italic;
+      color: var(--secondary);
+    }
+  }
+  // .footer__menu
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    @media (max-width: $tablet) {
+      gap: 26px;
+    }
+    @media (max-width: $mobile) {
+      gap: 20px;
+    }
+  }
+  // .footer__link
+  &__link {
+    font-size: toRem(18);
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    line-height: 120%;
+    &:hover {
+      color: var(--secondary);
+    }
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+  }
+  // .footer__bottom
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: 35px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      padding-top: toRem(30);
+      gap: 30px;
+    }
+  }
+  // .footer__copy
+  &__copy {
+    font-size: toRem(14);
+    line-height: 120%;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: "Inter";
+    letter-spacing: 1.6px;
+    @media (max-width: $mobile) {
+      font-size: toRem(12);
+      text-align: center;
+    }
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--secondary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: toRem(37);
+      height: toRem(37);
+      font-size: toRem(20);
+      line-height: 100%;
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+        &:hover {
+          background: var(--accent);
+        }
+      }
+    }
+  }
+  // .footer__social-link
+  &__social-link {
+  }
+}
+
+//====================================================================================================

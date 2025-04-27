@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"Contact Us" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="about">
+          <div class="about__baner">
+            <div class="about__baner-title">Contact Us</div>
+          </div>
+        </section>
+        <section class="contact">
+          <div class="contact__container">
+            <div class="contact__left">
+              <div class="main-title contact__title">
+                We’re
+                <span class="text-highlight">Here To Help</span>
+              </div>
+              <div class="contact__desc">
+                Have a question about coverage or need help? <br />Send us a
+                message and we’ll get back to you soon.
+              </div>
+              <form action="#" class="contact__form">
+                <div class="contact__item">
+                  <label class="contact__label" for="name">Full Name</label>
+                  <input
+                    placeholder=""
+                    type="text"
+                    id="name"
+                    class="contact__input"
+                  />
+                </div>
+                <div class="contact__item">
+                  <label class="contact__label" for="name">Email Address</label>
+                  <input
+                    placeholder=""
+                    type="email"
+                    id="email"
+                    class="contact__input"
+                  />
+                </div>
+                <div class="contact__item">
+                  <label class="contact__label" for="phone">Phone Number</label>
+                  <input
+                    placeholder=""
+                    type="tel"
+                    id="phone"
+                    class="contact__input"
+                  />
+                </div>
+                <div class="contact__item">
+                  <label class="contact__label" for="message"
+                    >Your Message</label
+                  >
+                  <textarea
+                    name="message"
+                    class="contact__input"
+                    id="message"
+                    cols="30"
+                    rows="7"
+                    placeholder=""
+                  ></textarea>
+                </div>
+                <button type="submit" class="red-button contact__button">
+                  Send Message
+                  <span class="_icon-chevron-right"></span>
+                </button>
+              </form>
+            </div>
+            <div class="contact__right">
+              <div class="contact__right-title">Contact Information</div>
+              <h2 class="red-title contact__right-subtitle">ADDRESS</h2>
+              <div class="contact__right-info">
+                123 Legacy Avenue, Suite 100 <br />
+                Orlando, FL 32810
+              </div>
+              <h2 class="red-title contact__right-subtitle">Phone</h2>
+              <div class="contact__right-info">
+                <a class="contact__right-link" href="tel:(800)548-3249"
+                  >(800) 548-3249</a
+                >
+              </div>
+              <h2 class="red-title contact__right-subtitle">Email</h2>
+              <div class="contact__right-info">
+                <a
+                  class="contact__right-link"
+                  href="mailto:support@mylegacyinsured.com"
+                  >support@mylegacyinsured.com</a
+                >
+              </div>
+              <h2 class="red-title contact__right-subtitle">Office Hours</h2>
+              <div class="contact__right-info">
+                Mon-Fri: 9AM - 6PM Est <br />
+                Saturday: 10AM - 2PM Est <br />
+                Sunday: Closed
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div id="map" class="map"></div>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

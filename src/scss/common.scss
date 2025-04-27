@@ -1,0 +1,90 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.text-bold {
+  font-weight: 700;
+}
+.red-button {
+  background: var(--red-dark);
+  border-radius: 35px;
+  font-size: toRem(22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+  font-weight: 600;
+  color: var(--white);
+  padding: toRem(14) toRem(20) toRem(14) toRem(35);
+  gap: 20px;
+  transition: all 0.3s;
+
+  span {
+    background: var(--secondary);
+    width: toRem(42);
+    height: toRem(42);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: toRem(30);
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      background: var(--accent);
+    }
+  }
+  @media (max-width: $mobile) {
+    font-size: toRem(18);
+    padding: toRem(10) toRem(15) toRem(10) toRem(25);
+    span {
+      width: toRem(30);
+      height: toRem(30);
+      font-size: toRem(20);
+    }
+  }
+}
+
+.text-highlight {
+  //   background: linear-gradient(
+  //     to top,
+  //     var(--text-underline) 30%,
+  //     transparent 30%
+  //   );
+  background: linear-gradient(transparent 60%, var(--text-underline));
+  display: inline;
+}
+
+.red-title {
+  font-family: "Inter";
+  font-size: toRem(20);
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  @media (max-width: $mobile) {
+    font-size: toRem(18);
+  }
+}
+
+.main-title {
+  font-size: toRem(65);
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -4px;
+
+  @media (max-width: $pc) {
+    max-width: unset;
+    font-size: toRem(60);
+  }
+  @media (max-width: $tablet) {
+    font-size: toRem(50);
+    letter-spacing: -2px;
+  }
+  @media (max-width: $mobile) {
+    font-size: toRem(30);
+    letter-spacing: -1px;
+  }
+}
+
+.text-italic {
+  font-style: italic;
+}
